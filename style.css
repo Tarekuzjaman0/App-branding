@@ -1,0 +1,104 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f4f4f9;
+  color: #333;
+  scroll-behavior: smooth;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+button#toggle-dark {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+
+.hero {
+  background: linear-gradient(135deg, #00b09b, #96c93d);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+.download-btn {
+  background: #fff;
+  color: #00b09b;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+.download-btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+.features {
+  padding: 40px 20px;
+  text-align: center;
+}
+.features h2 {
+  margin-bottom: 20px;
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+.feature-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background 0.3s;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  background: #e6f5f5;
+}
+.feature-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+body.dark .feature-card {
+  background: #1e1e1e;
+}
+body.dark .download-btn {
+  background: #444;
+  color: #fff;
+}
+body.dark .download-btn:hover {
+  background: #eee;
+  color: #000;
+}
+
+.developer {
+  background: #f0f0f0;
+  padding: 30px;
+  text-align: center;
+}
+body.dark .developer {
+  background: #222;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+}

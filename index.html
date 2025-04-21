@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>নওগাঁ জেলা অনলাইন সেবা</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+</head>
+<body>
+  <button id="toggle-dark">🌙</button>
+
+  <header class="hero" data-aos="fade-down">
+    <h1>নওগাঁ জেলা অনলাইন সেবা</h1>
+    <p>আপনার সেবায় আমরা</p>
+    <a href="assets/apk/naogaon-app.apk" class="download-btn" id="downloadApp">এখনই ডাউনলোড করুন</a>
+  </header>
+
+  <section class="features" id="features">
+    <h2 data-aos="fade-up">অ্যাপের বৈশিষ্ট্য</h2>
+    <div class="feature-grid">
+      <div class="feature-card" data-aos="zoom-in"><img src="assets/icons/architecture-and-city.png" alt="উপজেলা তথ্য"/><p>উপজেলা তথ্য</p></div>
+      <div class="feature-card" data-aos="zoom-in"><img src="assets/icons/pharmacy.png" alt="হসপিটাল"/><p>হসপিটাল</p></div>
+      <div class="feature-card" data-aos="zoom-in"><img src="assets/icons/advice.png" alt="ডক্টর"/><p>ডক্টর</p></div>
+      <div class="feature-card" data-aos="zoom-in"><img src="assets/icons/ambulance.png" alt="অ্যাম্বুলেন্স"/><p>অ্যাম্বুলেন্স</p></div>
+      <div class="feature-card" data-aos="zoom-in"><img src="assets/icons/doctor.png" alt="ব্লাড ডোনার"/><p>ব্লাড ডোনার</p></div>
+      <div class="feature-card" data-aos="zoom-in"><img src="assets/icons/fire-station.png" alt="ফায়ার সার্ভিস"/><p>ফায়ার সার্ভিস</p></div>
+      <div class="feature-card" data-aos="zoom-in"><img src="assets/icons/police-station.png" alt="থানা পুলিশ"/><p>থানা পুলিশ</p></div>
+      <div class="feature-card" data-aos="zoom-in"><img src="assets/icons/hotel.png" alt="হোটেল ও রেস্টুরেন্ট"/><p>হোটেল ও রেস্টুরেন্ট</p></div>
+      <div class="feature-card" data-aos="zoom-in"><img src="assets/icons/location.png" alt="দর্শনীয় স্থান"/><p>দর্শনীয় স্থান</p></div>
+      <div class="feature-card" data-aos="zoom-in"><img src="assets/icons/hotel.png" alt="রেলওয়ে"/><p>রেলওয়ে</p></div>
+      <div class="feature-card" data-aos="zoom-in"><img src="assets/icons/bus.png" alt="বাস টিকেট"/><p>বাস টিকেট</p></div>
+      <div class="feature-card" data-aos="zoom-in"><img src="assets/icons/koriya.png" alt="কোরিয়ার সার্ভিস"/><p>কোরিয়ার সার্ভিস</p></div>
+    </div>
+  </section>
+
+  <section class="developer" id="developer" data-aos="fade-up">
+    <h3>🌐 ওয়েবসাইট ডেভেলপ করেছেন</h3>
+    <p><strong>তরেক আহমেদ</strong> — ওয়েব অ্যাপ ডেভেলপার</p>
+    <p>প্রতিষ্ঠাতা টীম স্টাফ</p>
+    <
+  </section>
+
+  <footer>
+    <p>© ২০২৫ নওগাঁ জেলা অনলাইন সেবা</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    AOS.init();
+
+    const toggleBtn = document.getElementById("toggle-dark");
+    const body = document.body;
+
+    // Check & apply dark mode from localStorage
+    if (localStorage.getItem("mode") === "dark") {
+      body.classList.add("dark");
+    }
+
+    toggleBtn.onclick = () => {
+      body.classList.toggle("dark");
+      localStorage.setItem("mode", body.classList.contains("dark") ? "dark" : "light");
+    };
+
+    // Download button feedback
+    document.getElementById("downloadApp").addEventListener("click", () => {
+      alert("✅ ধন্যবাদ! ডাউনলোড শুরু হয়েছে। ইনস্টল করে আমাদের অ্যাপ ব্যবহার করুন।");
+    });
+  </script>
+</body>
+</html>
